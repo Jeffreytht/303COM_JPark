@@ -1,0 +1,10 @@
+@bearer = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkplZmZyZXkiLCJlbWFpbCI6InRhbmhvZXRoZW5nQGdtYWlsLmNvbSIsImFkbWluIjp0cnVlLCJpYXQiOjE2Mzk3NTgzNzQsImV4cCI6MTY0MTA1NDM3NH0.6k_8jIZhM_AdhSYx3XuKVoFdbPYjG-T4PHWkil1T20w
+
+###Import
+POST http://localhost:3001/api/admin/building/import
+Authorization: {{bearer}}
+
+###Get data
+GET http://localhost:3001/api/admin/building/
+Authorization: {{bearer}}
+

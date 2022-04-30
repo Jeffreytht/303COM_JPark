@@ -1,0 +1,4 @@
+@bearer = bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWE4ODVhYmI4NTg0MTQyMDI0ZjQyMSIsInVzZXJuYW1lIjoiSmVmZnJleSBUYW4iLCJlbWFpbCI6InRhbmhvZXRoZW5nQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjMxOTUzNDUyLCJleHAiOjE2MzMyNDk0NTJ9.bh-n8kI-LJ54YIAZxIcnwlsDDW3TTNGtTP_h8d1Buyc
+###GET SETTING
+GET http://localhost:3001/api/user/setting/
+Authorization: {{bearer}}

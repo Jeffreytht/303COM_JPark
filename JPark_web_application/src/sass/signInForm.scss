@@ -1,0 +1,24 @@
+@import "color";
+@import "app";
+
+.main {
+  height: 100vh;
+}
+
+.login-card {
+  max-width: 400px;
+}
+
+.sign-in-heading {
+  color: $secondary-color !important;
+  font-weight: bold;
+}
+
+.sign-in-title {
+  color: $primary-color !important;
+  font-weight: bold;
+}
+
+.btn-sign-in {
+  @include btn-main;
+}

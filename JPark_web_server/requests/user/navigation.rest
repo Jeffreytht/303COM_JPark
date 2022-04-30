@@ -1,0 +1,7 @@
+### Entry
+POST http://localhost:3001/api/user/navigation/entry
+Content-Type: application/json
+
+{
+  "msg":{"test": "test"}
+}

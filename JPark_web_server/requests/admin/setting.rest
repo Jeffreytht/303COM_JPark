@@ -1,0 +1,79 @@
+@bearer =Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkplZmZyZXkiLCJlbWFpbCI6InRhbmhvZXRoZW5nQGdtYWlsLmNvbSIsImFkbWluIjp0cnVlLCJpYXQiOjE2Mzk3NTgzNzQsImV4cCI6MTY0MTA1NDM3NH0.6k_8jIZhM_AdhSYx3XuKVoFdbPYjG-T4PHWkil1T20w
+### Update Operating hours
+PUT http://localhost:3001/api/admin/setting/operating-hour
+Authorization: {{bearer}}
+Content-Type: application/json
+
+{
+  "operatingHour": [
+    {
+      "startTime":"10:00", 
+      "endTime":"22:00", 
+      "open24Hour":false, 
+      "closed": false
+    }, 
+    {
+      "startTime":"10:00", 
+      "endTime":"20:00", 
+      "open24Hour":false, 
+      "closed": false
+    }, {
+      "startTime":"10:00", 
+      "endTime":"20:00", 
+      "open24Hour":false, 
+      "closed": false
+    }, {
+      "startTime":"10:00", 
+      "endTime":"20:00", 
+      "open24Hour":false, 
+      "closed": false
+    }, {
+      "startTime":"10:00", 
+      "endTime":"20:00", 
+      "open24Hour":false, 
+      "closed": false
+    }, {
+      "startTime":"10:00", 
+      "endTime":"20:00", 
+      "open24Hour":false, 
+      "closed": false
+    }, {
+      "startTime":"10:00", 
+      "endTime":"20:00", 
+      "open24Hour":false, 
+      "closed": false
+    }]
+}
+
+###Get operating hours
+GET http://localhost:3001/api/admin/setting/
+Authorization: {{bearer}}
+
+
+### Update isReservationEnable
+PUT http://localhost:3001/api/admin/setting/reservation
+Authorization: {{bearer}}
+Content-Type: application/json
+
+{
+  "isReservationEnable" : true
+}
+
+
+### Update reservation fee
+PUT http://localhost:3001/api/admin/setting/reservation-fee
+Authorization: {{bearer}}
+Content-Type: application/json
+
+{
+  "reservationFeePerHour" : "-1.3152211"
+}
+
+### Update reservation duration
+PUT http://localhost:3001/api/admin/setting/reservation-duration
+Authorization: {{bearer}}
+Content-Type: application/json
+
+{
+  "maxReservationDuration" : "2"
+}

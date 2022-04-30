@@ -1,0 +1,26 @@
+@baseURL = dashboard.situm.com
+@buildingID = 8954
+@bearer = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhMzBhMjlkMC0xZTFiLTQwMzktOWVjZS1hYzk5NTE0NjVlNzQiLCJlbWFpbCI6InRhbmhvZXRoZW5nQGdtYWlsLmNvbSIsIm9yZ2FuaXphdGlvbl91dWlkIjoiZGRmZjEyNDAtNmVjZi00NDg1LWJhYzktMWIxY2RhYTU0MWRjIiwiaWF0IjoxNjMzNDQ4NTQxLCJhcGlfcGVybWlzc2lvbiI6InJlYWQtd3JpdGUiLCJleHAiOjE2MzM4MDg1NDF9.dpYkU679l_Ysynk_0fsaG365whi9gvKz9lIwDvzn4O0
+
+### Get JWT Token
+// curl -X POST -H 'Content-Type:application/json' -H 'X-API-EMAIL: tanhoetheng@gmail.com' -H 'X-API-KEY:bbf8bdeb7ffe036de6efddddf1b52b84319478b2c8c69b962a0b65761dc2f3b7'  https://dashboard.situm.com/api/v1/auth/access_tokens 
+POST https://{{baseURL}}/api/v1/auth/access_tokens
+Content-Type: application/json
+X-API-EMAIL: tanhoetheng@gmail.com
+X-API-KEY: bbf8bdeb7ffe036de6efddddf1b52b84319478b2c8c69b962a0b65761dc2f3b7
+
+### Get buildings
+GET https://{{baseURL}}/api/v1/buildings
+Content-Type: application/json
+Authorization: {{bearer}}
+
+### Get floors
+GET https://{{baseURL}}/api/v1/buildings/{{buildingID}}/floors
+Content-Type: application/json
+Authorization: {{bearer}}
+
+### Get POIs
+GET http://{{baseURL}}/api/v1/buildings/{{buildingID}}/pois
+Content-Type: application/json
+Authorization: {{bearer}}
+

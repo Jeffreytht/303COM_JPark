@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<resources>
+  <color name="splashscreen_background">#35B76C</color>
+  <color name="iconBackground">#35B76C</color>
+  <color name="colorPrimary">#023c69</color>
+  <color name="colorPrimaryDark">#35B76C</color>
+</resources>

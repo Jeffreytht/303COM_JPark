@@ -1,0 +1,24 @@
+@import "app";
+
+.setting h5 {
+  font-weight: bold;
+  color: $text-color;
+}
+
+.setting h6 {
+  font-weight: 600;
+  color: $text-color;
+}
+
+.setting .content {
+  text-align: justify;
+  color: $text-color;
+  font-size: 1em !important;
+}
+
+.btn-setting {
+  @include btn-main;
+  font-size: 0.7em;
+  border-radius: 5% !important;
+  padding: 10px 20px 10px 20px !important;
+}

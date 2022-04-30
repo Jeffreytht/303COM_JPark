@@ -1,0 +1,81 @@
+@bearer = bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxM2RjNTdlNTFjMTJkMjVlMzA2NjA5OSIsInVzZXJuYW1lIjoiVGFuIEhvZSBUaGVuZyIsImVtYWlsIjoiamVmZnJleUBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTYzMTk3MjAwMywiZXhwIjoxNjMzMjY4MDAzfQ.r309G4B_sO6_GhXXeS14shgWqEP4oEb3wghmG8WLv6c
+
+###User registraion
+POST http://localhost:3001/api/user/register
+Content-Type: application/json
+
+{
+  "email": "jeffrey@gmail.com",
+  "password": "12345abcde",
+  "username": "Jeffrey Tan",
+  "contactNum": "012-4561789"
+}
+
+###User login
+POST http://localhost:3001/api/user/login
+Content-Type: application/json
+
+{
+  "email": "jeffrey@gmail.com",
+  "password": "12345abcde"
+}
+
+
+###User token
+POST http://localhost:3001/api/user/token
+Content-Type: application/json
+
+{
+  "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWE4ODVhYmI4NTg0MTQyMDI0ZjQyMSIsInVzZXJuYW1lIjoiVGFuIEhvZSBUaGVuZyIsImVtYWlsIjoidGFuaG9ldGhlbmdAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE2MzE4MDIwOTl9.mZ-tlmneK4Vz4LDWohX_FyNVN2L5lthlLFDx99gVnEU"
+}
+
+
+###User email validation
+POST http://localhost:3001/api/user/email
+Content-Type: application/json
+
+{
+  "email":"tanhoetheng@gmail.com"
+}
+
+###Get account info
+GET http://localhost:3001/api/user/accountInfo
+Authorization: {{bearer}}
+
+###Update username 
+PUT http://localhost:3001/api/user/username
+Authorization: {{bearer}}
+Content-Type: application/json
+
+{
+  "username" : "Tan Hoe Theng"
+}
+
+###Update email 
+PUT http://localhost:3001/api/user/email
+Authorization: {{bearer}}
+Content-Type: application/json
+
+{
+  "email" : "tanhoetheng@gmail.com"
+}
+
+###Update Contact num 
+PUT http://localhost:3001/api/user/contactNum
+Authorization: {{bearer}}
+Content-Type: application/json
+
+{
+  "contactNum" : "012-4727438"
+}
+
+
+###Update Password
+PUT http://localhost:3001/api/user/password
+Authorization: {{bearer}}
+Content-Type: application/json
+
+{
+  "oldPassword": "12345abcdef",
+  "password" : "12345abcde"
+}

@@ -1,0 +1,17 @@
+@bearer = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1yIEoiLCJlbWFpbCI6ImpAZ21haWwuY29tIiwiYWRtaW4iOnRydWUsImlhdCI6MTYzMzUwMTEwOSwiZXhwIjoxNjM0Nzk3MTA5fQ.uLhr0g3eGn8Ww5YIfTO38pDzb7My4I8tUsY4wMg4v_8
+
+###Get parking space
+GET http://localhost:3001/api/admin/parking-lot/parking-spaces
+Authorization: {{bearer}}
+Content-Type: application/json
+
+
+###Get parking lot
+GET http://localhost:3001/api/admin/parking-lot/
+Authorization: {{bearer}}
+Content-Type: application/json
+
+###Get reservation
+GET http://localhost:3001/api/admin/parking-lot/reservations-count
+Authorization: {{bearer}}
+Content-Type: application/json

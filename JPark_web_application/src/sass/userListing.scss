@@ -1,0 +1,18 @@
+@import "color";
+@import "app";
+
+.main {
+  height: 100vh;
+}
+
+.modal-title {
+  color: $secondary-color !important;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.modal-username {
+  color: $primary-color !important;
+  margin-left: 5px;
+  font-weight: bold;
+}

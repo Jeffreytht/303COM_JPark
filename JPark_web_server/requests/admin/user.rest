@@ -1,0 +1,51 @@
+@bearer = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1yIEoiLCJlbWFpbCI6ImpAZ21haWwuY29tIiwiYWRtaW4iOnRydWUsImlhdCI6MTYzMzcyMDU2OCwiZXhwIjoxNjM1MDE2NTY4fQ.7eCe9UrN5PkuaQbPwFXv7u1_QfBdZFgjBzsRSPt3-pw
+
+GET  http://localhost:3001/api/admin/user/users
+Authorization: {{bearer}}
+
+### Login 
+POST http://localhost:3001/api/admin/user/login
+Content-Type: application/json
+
+{
+    "email":"tanhoetheng@gmail.com",
+    "password": "12345abcde"
+}
+
+
+### Token
+POST http://localhost:3001/api/admin/user/token
+Content-Type: application/json
+
+{
+    "token" :
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkplZmZyZXkgVGFuIiwiZW1haWwiOiJ0YW5ob2V0aGVuZ0BnbWFpbC5jb20iLCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNjMxMjc5NjcxfQ.S2iZhvH-P7CoZ4ZEwymLe6EqmYn-E9P9B8HdRFFcbJw"
+}
+
+
+
+### Logout
+DELETE  http://localhost:3001/api/admin/user/logout
+Content-Type: application/json
+
+{
+    "refreshToken":
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkplZmZyZXkgVGFuIiwiZW1haWwiOiJ0YW5ob2V0aGVuZ0BnbWFpbC5jb20iLCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNjMxMjc5NjQ1fQ.DgCRBB0_rqLkrnB6ufQD4Xf_EEmRkJD82g9uGUoxV-w"
+}
+
+
+### Register
+POST http://localhost:3001/api/admin/user/register
+Content-Type: application/json
+
+{
+    "username":"Jeffrey",
+    "email" : "tanhoetheng@gmail.com",
+    "password": "12345abcde"
+}
+
+# {
+#     "username":"Parking Prototype",
+#     "email" : "parking_prototype@gmail.com",
+#     "password": "123456"
+# }

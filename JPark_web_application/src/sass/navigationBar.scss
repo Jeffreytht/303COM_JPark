@@ -1,0 +1,32 @@
+@import "color";
+
+.nav {
+  background-color: white;
+}
+
+.nav-item {
+  color: $text-color !important;
+  text-decoration: none;
+  border-bottom: 0px solid $primary-color;
+
+  &:hover {
+    color: $primary-color !important;
+    text-decoration: none;
+  }
+}
+
+.nav-brand {
+  color: $primary-color !important;
+  font-weight: bold;
+}
+
+.nav-active {
+  border-bottom: 3px solid $primary-color;
+  color: $primary-color !important;
+  font-weight: bold;
+
+  &-icon {
+    color: $primary-color !important;
+    font-weight: bold;
+  }
+}

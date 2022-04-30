@@ -1,0 +1,15 @@
+@bearer = bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWE4ODVhYmI4NTg0MTQyMDI0ZjQyMSIsInVzZXJuYW1lIjoiSmVmZnJleSBUYW4iLCJlbWFpbCI6InRhbmhvZXRoZW5nQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjMzMzYzMjgxLCJleHAiOjE2MzQ2NTkyODF9.2CdUkCYEwYqYJL3qKyw6vIidn2BV0nySmhesXzB8RoM
+
+###Reload credit
+POST http://localhost:3001/api/user/wallet/reload
+Authorization: {{bearer}}
+Content-Type: application/json
+
+{
+  "credit": "10"
+}
+
+###Reload credit
+POST http://localhost:3001/api/user/wallet/history
+Authorization: {{bearer}}
+Content-Type: application/json

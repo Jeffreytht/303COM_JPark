@@ -1,0 +1,50 @@
+{
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "@fortawesome/react-native-fontawesome": "^0.2.7",
+    "@react-native-community/viewpager": "^5.0.11",
+    "@react-navigation/drawer": "^6.1.4",
+    "@react-navigation/material-top-tabs": "^6.0.2",
+    "@react-navigation/native": "^6.0.2",
+    "@react-navigation/native-stack": "^6.0.5",
+    "@react-navigation/stack": "^6.0.6",
+    "expo": "~42.0.0",
+    "expo-secure-store": "~10.2.0",
+    "expo-speech": "^9.2.1",
+    "expo-splash-screen": "~0.11.2",
+    "expo-status-bar": "~1.0.4",
+    "expo-updates": "~0.8.2",
+    "jwt-decode": "^3.1.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "0.63.4",
+    "react-native-elements": "^3.4.2",
+    "react-native-gesture-handler": "~1.10.2",
+    "react-native-maps": "^0.29.3",
+    "react-native-pager-view": "^5.4.4",
+    "react-native-paper": "^4.9.2",
+    "react-native-reanimated": "~2.2.0",
+    "react-native-screens": "~3.4.0",
+    "react-native-situm-plugin": "^0.0.12",
+    "react-native-svg": "^12.1.1",
+    "react-native-tab-view": "^3.1.1",
+    "react-native-unimodules": "~0.14.5",
+    "react-native-web": "~0.13.12",
+    "react-navigation": "^4.4.4"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.9.0"
+  },
+  "private": true,
+  "name": "jpark",
+  "version": "1.0.0"
+}

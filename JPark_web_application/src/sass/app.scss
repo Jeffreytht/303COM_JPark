@@ -1,0 +1,29 @@
+@import "color";
+
+body {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.main {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.main-header {
+  color: $secondary-color;
+  font-weight: bold;
+}
+
+@mixin btn-main {
+  background-color: $primary-color !important;
+  border-color: $primary-color !important;
+  color: white !important;
+
+  &:hover {
+    background-color: darken($primary-color, 5) !important;
+    border-color: darken($primary-color, 5) !important;
+    color: white !important;
+  }
+}

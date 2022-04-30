@@ -1,0 +1,144 @@
+@import "app";
+@import "color";
+
+.floor-plan {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: auto;
+  overflow-x: scroll;
+  overflow-y: auto;
+  border: 1px solid grey;
+  scroll-behavior: smooth;
+}
+
+.floor-plan > * {
+  position: absolute;
+}
+
+@mixin parking-space-color($bgColor) {
+  background-color: rgba($bgColor, 0.8);
+  border: 2px solid darken($bgColor, 5);
+  border-radius: 50%;
+}
+
+@mixin parking-space-size($size) {
+  min-height: $size;
+  min-width: $size;
+  max-height: $size;
+  max-width: $size;
+}
+
+@mixin parking-space-center($size) {
+  margin-top: -$size / 2;
+  margin-left: -$size / 2;
+}
+
+@mixin parking-space-hover {
+  &:hover {
+    border: 2px solid $secondary-color;
+  }
+}
+
+$ps-size: 20px;
+.parking-space-empty {
+  @include parking-space-color(lightGreen);
+  @include parking-space-size($ps-size);
+  @include parking-space-center($ps-size);
+  @include parking-space-hover();
+}
+
+.parking-space-reserved {
+  @include parking-space-color(orange);
+  @include parking-space-size($ps-size);
+  @include parking-space-center($ps-size);
+  @include parking-space-hover();
+}
+
+.parking-space-occupied {
+  @include parking-space-color(red);
+  @include parking-space-size($ps-size);
+  @include parking-space-center($ps-size);
+  @include parking-space-hover();
+}
+
+.parking-space-unoccupied {
+  @include parking-space-color(red);
+  @include parking-space-size($ps-size);
+  @include parking-space-center($ps-size);
+  @include parking-space-hover();
+}
+
+.parking-space-selected {
+  @include parking-space-center(30px);
+  @include parking-space-size(30px);
+  border: 2px solid $secondary-color;
+}
+
+.parking-space-empty-indicator {
+  @include parking-space-color(lightGreen);
+  @include parking-space-size(15px);
+}
+
+.parking-space-reserved-indicator {
+  @include parking-space-color(darkOrange);
+  @include parking-space-size(15px);
+}
+
+.parking-space-occupied-indicator {
+  @include parking-space-color(red);
+  @include parking-space-size(15px);
+}
+
+.btn-floor {
+  border: 1px solid $secondary-color !important;
+  color: $secondary-color !important;
+
+  &:hover {
+    border: 1px solid darken($secondary-color, 10) !important;
+    background-color: darken($secondary-color, 10) !important;
+    color: white !important;
+  }
+}
+
+.btn-floor-checked {
+  border: 1px solid darken($secondary-color, 10) !important;
+  background-color: darken($secondary-color, 10) !important;
+  color: white !important;
+
+  &:hover {
+    border: 1px solid darken($secondary-color, 10) !important;
+    background-color: darken($secondary-color, 10) !important;
+    color: white;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $secondary-color;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+.main .smallHeading {
+  font-weight: bold;
+  color: $text-color;
+}
+
+.main {
+  padding-bottom: 10;
+}
+
+.light-indicator {
+  display: inline-block;
+}
+
+.btn-save {
+  @include btn-main;
+  font-size: 0.75rem;
+  margin: 0 !important;
+}

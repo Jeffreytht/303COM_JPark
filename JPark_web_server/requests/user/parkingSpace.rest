@@ -1,0 +1,37 @@
+@bearer = bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWE4ODVhYmI4NTg0MTQyMDI0ZjQyMSIsInVzZXJuYW1lIjoiSmVmZnJleSBUYW4iLCJlbWFpbCI6InRhbmhvZXRoZW5nQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjMzNDIzMjY3LCJleHAiOjE2MzQ3MTkyNjd9.JiTV1xZ9DRoTU3j5ckpfjK8rwVi_47lBODdwueoiokY
+
+### Get parking space
+GET http://localhost:3001/api/user/parking-space?parkingSpaceId=79893
+Authorization: {{bearer}}
+
+### Reserve parking space
+POST http://localhost:3001/api/user/parking-space/reserve
+Authorization: {{bearer}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "parkingSpaceId" : 79800,
+  "duration": "1"
+}
+
+###Unlock parking space
+POST http://localhost:3001/api/user/parking-space/unlock
+Authorization: {{bearer}}
+Content-Type: application/json
+
+{
+  "parkingSpaceId": 79800
+}
+
+
+###Nearest parking space
+GET http://localhost:3001/api/user/parking-space/nearest-to-entrance
+Authorization: {{bearer}}
+Content-Type: application/json
+
+
+###OKU
+GET http://localhost:3001/api/user/parking-space/oku
+Authorization: {{bearer}}
+Content-Type: application/json
